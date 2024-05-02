@@ -1,0 +1,153 @@
+:root{
+    --name-size: 1.75rem;
+    --job-size: 1.25rem;
+    --img-size: 200px;
+    --bg-black: black;
+    --font-color: #FFFFFF;
+    --spaces:15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+
+html{
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--bg-black);
+}
+
+body{
+    padding: 25px 50px;
+    display: flex;
+
+}
+
+p,li,h3{
+    margin-block: var(--spaces);
+}
+
+/* Description dev */
+#dev_info {
+    min-width: 15%;
+}
+
+#dev_info div {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dev_info div #img_dev{
+    width: var(--img-size);
+    height: var(--img-size);
+    border-radius: 50%;
+    margin-bottom: var(--spaces);
+    
+}
+
+#dev_info #name{
+    width: 100%;
+    text-align: center;
+    font-size: var(--name-size);
+    margin-bottom: var(--spaces);
+}
+
+#dev_info #rol{
+    width: 100%;
+    text-align: center;
+    font-size: var(--job-size);
+}
+
+#dev_info div #social_media{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spaces);
+    font-size: 1.5rem;
+    margin-top: calc(var(--spaces)*3);
+}
+
+/* Data dev */
+#dev_data{
+    width: 85%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-black);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: var(--spaces) 100px;
+    border-bottom: 1px solid var(--font-color);
+}
+
+.nav_item{
+    text-decoration: none;
+    text-wrap: nowrap;
+    padding: 10px 10px;
+}
+
+.nav_item:hover{
+    background-color: #FFFFFF50;
+    border-radius: 5px;
+}
+
+main{
+    padding-inline: 100px;
+}
+
+#about,#skills,#other_skills, #experience, #contact{
+    margin-block: var(--spaces);
+}
+
+/* Data dev: SKILLS */
+/* Data dev: OTHER SKILLS */
+#skills_container, #other_skills_container{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spaces);
+    flex-wrap: wrap;
+    padding-inline: calc(var(--spaces)*1.33)
+}
+
+/* Data dev: EXPERIENCE */
+.job .job_header{
+    display: flex;
+    justify-content: space-between;
+    margin-block: var(--spaces);
+}
+
+.job .job_header .job_title, .job .job_header .job_data{
+    font-weight: normal;
+    font-size: .75rem;
+}
+
+.job .job_description ul{
+    padding-inline: calc(var(--spaces)*2.5);
+}
+
+/* Footer */
+
+footer{
+    border-block-start: 1px solid var(--font-color);
+    margin-block-start: calc(var(--spaces)*3);
+    font-size: .75rem;
+}
+
+footer p{
+    text-align: center;
+}
+
