@@ -1,10 +1,16 @@
-:root{
+:root {
     --name-size: 1.75rem;
     --job-size: 1.25rem;
     --img-size: 200px;
+    --spaces: 15px;
+
     --bg-black: black;
-    --font-color: #FFFFFF;
-    --spaces:15px;
+    --bg-white: white;
+    --font-color-dark: #FFFFFF;
+    --font-color-light: #000000;
+    --bg-color: var(--bg-black);
+    --font-color: var(--font-color-dark);
+    --hover: #FFFFFF50
 }
 
 *{
@@ -23,7 +29,17 @@ html{
 body{
     padding: 25px 50px;
     display: flex;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 
+}
+
+/* Modo claro */
+body.light-mode {
+    --bg-color: var(--bg-white);
+    --font-color: var(--font-color-light);
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 p,li,h3{
@@ -71,6 +87,11 @@ p,li,h3{
     gap: var(--spaces);
     font-size: 1.5rem;
     margin-top: calc(var(--spaces)*3);
+    list-style: none;
+}
+
+#dev_info div #social_media li {
+    cursor: pointer;
 }
 
 /* Data dev */
@@ -81,7 +102,7 @@ p,li,h3{
 header {
     position: sticky;
     top: 0;
-    background-color: var(--bg-black);
+    background-color: var(--bg-color);
 }
 
 header nav ul {
@@ -101,7 +122,7 @@ header nav ul {
 }
 
 .nav_item:hover{
-    background-color: #FFFFFF50;
+    background-color: var(--hover);
     border-radius: 5px;
 }
 
@@ -111,6 +132,20 @@ main{
 
 #about,#skills,#other_skills, #experience, #contact{
     margin-block: var(--spaces);
+}
+
+#about, #skills,#other_skills, #experience, #contact{
+    margin-block: var(--spaces);
+}
+
+.section_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_header i{
+    cursor: pointer;
 }
 
 /* Data dev: SKILLS */
@@ -133,6 +168,7 @@ main{
 .job .job_header .job_title, .job .job_header .job_data{
     font-weight: normal;
     font-size: .75rem;
+    font-style: italic;
 }
 
 .job .job_description ul{
